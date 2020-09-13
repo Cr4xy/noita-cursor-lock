@@ -1,0 +1,4 @@
+<Mod
+	name="Cursor lock"
+	description="Prevents your mouse from leaving noita. (Press windows-button or alt+tab to get out.)"
+	request_no_api_restrictions="1" />
