@@ -77,11 +77,11 @@ end
 
 
 local user32
-local hwnd
+local hwnd = 0
 local rect
 function clip()
 	if not user32 then user32 = ffi.load('user32') end
-	if not hwnd or hwnd == 0 then hwnd = user32.GetActiveWindow() end
+	if hwnd == 0 then hwnd = user32.GetActiveWindow() end
 	if not rect then rect = ffi.new('RECT') end
 	if hwnd ~= 0 then
 		if user32.GetWindowRect(hwnd, rect) ~= 0 then
